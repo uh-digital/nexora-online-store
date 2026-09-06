@@ -1,0 +1,2374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXORA | Premium Gaming & Creator Gear</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script>
+        tailwind.config = {
+
+            theme: {
+                extend: {
+                    fontFamily: {
+                        orbitron: ['Orbitron', 'sans-serif'],
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: "#00E5FF",
+                        secondary: "#7C3AED",
+                        darkbg: "#0B1120",
+                        card: "#121826",
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-darkbg text-white font-poppins">
+
+<!-- ================= NAVBAR START ================= -->
+
+<nav class="fixed top-0 left-0 w-full z-50 bg-[#0B1120]/90 backdrop-blur-lg border-b border-cyan-500/20">
+
+    <div class="w-full px-8 lg:px-12 xl:px-16">
+
+        <div class="h-20 grid grid-cols-3 items-center">
+
+            <!-- ================= Logo ================= -->
+
+            <div class="flex justify-start min-w-0">
+
+                <a href="#" class="flex items-center gap-2 sm:gap-3 min-w-0">
+
+                    <div
+                      class="w-10 h-10 sm:w-12 sm:h-12 shrink-0 rounded-full bg-cyan-500 flex items-center justify-center text-black font-bold text-lg sm:text-xl shadow-lg shadow-cyan-500/40">
+                        N
+
+                    </div>
+
+                    <div>
+
+                        <h1 class="font-orbitron text-xl font-bold tracking-wider text-cyan-400">
+
+                            NEXORA
+
+                        </h1>
+
+                        <p class="text-xs text-gray-400">
+
+                            Premium Gaming & Creator Gear
+
+                        </p>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+            <!-- ================= Desktop Menu ================= -->
+
+            <div class="hidden lg:flex justify-center">
+
+               <ul class="flex items-center gap-6 font-medium whitespace-nowrap">
+
+                    <li>
+                        <a href="index.html" class="hover:text-cyan-400 duration-300">
+                            Home
+                        </a>
+
+                    </li>
+
+                    <li>
+                        <a href="#categories" class="hover:text-cyan-400 duration-300">
+                            Categories
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="products.html" class="hover:text-cyan-400 duration-300">
+                            Products
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#deals" class="hover:text-cyan-400 duration-300">
+                            Deals
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html" class="hover:text-cyan-400 duration-300">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html" class="hover:text-cyan-400 duration-300">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            
+          <!-- ================= Right Side ================= -->
+
+                <div class="hidden lg:flex justify-end items-center gap-5">
+
+                    <!-- Search Bar -->
+
+                    <div class="relative">
+
+                        <input
+                            id="searchInput"
+                            type="text"
+                            placeholder="Search products..."
+                            class="w-52 xl:w-60 bg-[#121826] border border-cyan-500/30 rounded-full py-2.5 pl-12 pr-5 text-sm text-white placeholder-gray-400 outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/30 transition-all duration-300">
+
+                        <span
+                        class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">
+
+                        🔍
+
+                    </span>
+
+                    </div>
+
+                    <!-- Wishlist -->
+
+                    <button
+                    id="wishlistBtn"
+                    class="text-2xl hover:text-pink-500 duration-300">
+
+                    <i class="fa-regular fa-heart"></i>
+
+                </button>
+
+                    <!-- Cart -->
+
+                   <button
+                    id="cartBtn"
+                    class="relative text-2xl hover:text-cyan-400 duration-300">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    <span
+                        id="cartCount"
+                        class="absolute -top-2 -right-3 w-5 h-5 rounded-full bg-cyan-500 text-black text-xs flex items-center justify-center font-bold">
+
+                        0
+
+                    </span>
+
+                </button>
+                
+        
+                 <!-- Login / User Button -->
+
+                <button 
+                    id="loginBtn" 
+                    type="button"
+                    class="bg-cyan-500 hover:bg-cyan-400 text-black px-6 py-2 rounded-full font-semibold duration-300 shadow-lg shadow-cyan-500/30 flex items-center gap-2">
+
+                    <i class="fa-regular fa-user"></i>
+
+                    Login
+
+                </button>
+
+            </div>
+
+                     <!-- ================= Mobile Actions + Button ================= -->
+
+        <div class="lg:hidden col-span-2 flex items-center justify-end gap-4">
+
+           <!-- Mobile Search -->
+            <button
+                id="mobileSearchBtn"
+                type="button"
+                class="text-2xl text-gray-200 hover:text-cyan-400 transition"
+                aria-label="Search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+            </button>
+
+            <!-- Mobile Search Bar -->
+            <div
+                id="mobileSearchBar"
+                class="hidden col-span-2 w-full mt-3">
+
+                <input
+                    id="mobileSearchInput"
+                    type="search"
+                    placeholder="Search products..."
+                    autocomplete="off"
+                    enterkeyhint="search"
+                    class="w-full bg-[#121826] border border-cyan-500/30 rounded-full py-3 px-5 text-sm text-white placeholder-gray-400 outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/30 
+                    transition-all duration-300">
+                    
+                </div>
+
+            <!-- Mobile Wishlist -->
+            <button
+                id="mobileWishlistBtn"
+                type="button"
+                class="text-2xl text-gray-200 hover:text-pink-500 transition"
+                aria-label="Wishlist">
+
+                <i class="fa-regular fa-heart"></i>
+
+            </button>
+
+
+            <!-- Mobile Cart -->
+            <button
+                id="mobileCartBtn"
+                type="button"
+                class="relative text-2xl text-gray-200 hover:text-cyan-400 transition"
+                aria-label="Cart">
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                <span
+                    id="mobileCartCount"
+                    class="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-cyan-500 text-black text-[10px] flex items-center justify-center font-bold">
+                    0
+                </span>
+
+            </button>
+
+
+            <!-- Mobile Menu Button -->
+            <button
+                id="menuBtn"
+                type="button"
+                class="text-4xl text-cyan-400 hover:text-cyan-300 transition ml-1"
+                aria-label="Open Menu"
+                aria-expanded="false">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+                        
+        <!-- ================= Mobile Menu ================= -->
+
+        <div
+            id="mobileMenu"
+            class="hidden lg:hidden bg-[#101827] border-t border-cyan-500/20 px-6 py-6">
+
+            <div class="flex flex-col gap-4">
+
+                <a
+                    href="index.html"
+                    class="text-white hover:text-cyan-400 transition py-2">
+                    Home
+                </a>
+
+                <a
+                    href="index.html#categories"
+                    class="text-white hover:text-cyan-400 transition py-2">
+                    Categories
+                </a>
+
+                <a
+                    href="products.html"
+                    class="text-white hover:text-cyan-400 transition py-2">
+                    Products
+                </a>
+
+                <a
+                    href="index.html#deals"
+                    class="text-white hover:text-cyan-400 transition py-2">
+                    Deals
+                </a>
+
+                <a
+                    href="about.html"
+                    class="text-white hover:text-cyan-400 transition py-2">
+                    About
+                </a>
+
+                <a
+                    href="contact.html"
+                    class="text-white hover:text-cyan-400 transition py-2">
+                    Contact
+                </a>
+
+                <button
+                    id="mobileLoginBtn"
+                    type="button"
+                    class="bg-cyan-500 hover:bg-cyan-400 text-black py-3 rounded-full font-bold transition mt-2">
+
+                    <i class="fa-regular fa-user mr-2"></i>
+                    Login
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</nav>
+
+                          <!-- ================= NAVBAR END ================= --> 
+
+                        <!-- ================= WISHLIST SIDEBAR START ================= -->
+
+            <div
+                id="wishlistSidebar"
+                class="fixed top-0 right-0 h-full w-96 bg-[#121826] border-l border-cyan-500/20 shadow-2xl translate-x-full transition-transform duration-300 z-[999] flex flex-col">
+
+                <!-- Header -->
+
+                <div
+                    class="flex items-center justify-between px-6 py-5 border-b border-gray-700">
+
+                    <h2
+                        class="text-2xl font-bold font-orbitron text-pink-400">
+
+                        <i class="fa-regular fa-heart mr-2"></i>
+
+                        Wishlist
+
+                    </h2>
+
+                    <button
+                        id="closeWishlist"
+                        class="text-3xl hover:text-red-500 duration-300">
+
+                        &times;
+
+                    </button>
+
+                </div>
+
+
+                <!-- Wishlist Items -->
+
+                <div
+                    id="wishlistItems"
+                    class="flex-1 min-h-0 overflow-y-auto p-6">
+
+                    <!-- Empty State -->
+
+                    <div
+                        class="h-full flex flex-col justify-center items-center text-center">
+
+                        <i
+                            class="fa-regular fa-heart text-7xl text-pink-400 mb-6">
+                        </i>
+
+                        <h3
+                            class="text-2xl font-bold mb-3">
+
+                            Your Wishlist is Empty
+
+                        </h3>
+
+                        <p class="text-gray-400">
+
+                            Save your favorite gaming products here.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Wishlist Remove All Controls -->
+
+                <div
+                    id="wishlistRemoveControls"
+                    class="flex-shrink-0 border-t border-gray-700 px-6 py-4">
+
+                    <div class="flex justify-center">
+
+                        <button
+                            id="removeAllWishlistBtn"
+                            type="button"
+                            class="bg-red-500 hover:bg-red-400 text-white px-6 py-2 rounded-full font-semibold transition duration-300 shadow-lg shadow-red-500/20">
+                                
+                            Remove All
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Dark Background -->
+
+            <div
+                id="wishlistOverlay"
+                class="fixed inset-0 bg-black/50 hidden z-[998]">
+
+            </div>
+
+            <!-- ================= WISHLIST SIDEBAR END ================= -->
+
+            <!-- ================= CART SIDEBAR START ================= -->
+
+            <div id="cartSidebar" 
+            class="fixed top-0 right-0 h-full w-96 bg-[#121826] border-l border-cyan-500/20 shadow-2xl translate-x-full transition-transform duration-300 z-[999] flex flex-col">
+
+            <!-- Header -->
+
+            <div class="flex items-center justify-between px-6 py-5 border-b border-gray-700">
+
+                <h2 class="text-2xl font-bold font-orbitron text-cyan-400">
+
+                    <i class="fa-solid fa-cart-shopping mr-2"></i>
+
+                    Shopping Cart
+
+                </h2>
+
+                <button 
+                    id="closeCart"
+                    type="button"
+                    class="text-3xl hover:text-red-500 duration-300">
+
+                    &times;
+
+                </button>
+
+            </div>
+
+
+            <!-- Cart Items -->
+
+            <div 
+                id="cartItems" 
+                class="flex-1 overflow-y-auto p-6">
+
+                <div 
+                    class="h-full flex flex-col justify-center items-center text-center">
+
+                    <i class="fa-solid fa-cart-shopping text-7xl text-cyan-400 mb-6"></i>
+
+                    <h3 class="text-2xl font-bold mb-3">
+
+                        Your Cart is Empty
+
+                    </h3>
+
+                    <p class="text-gray-400">
+
+                        Add your favorite gaming products to the cart.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Footer -->
+
+            <div class="border-t border-gray-700 p-6">
+
+                <div class="flex justify-between mb-5">
+
+                    <span class="text-lg">
+
+                        Total
+
+                    </span>
+
+                    <span 
+                        id="cartTotal" 
+                        class="text-xl font-bold text-cyan-400">
+
+                        $0.00
+
+                    </span>
+
+                </div>
+
+
+                <!-- PROCEED TO CHECKOUT -->
+
+                <button 
+                    id="proceedtoCheckoutBtn"
+                    type="button"
+                    class="w-full bg-cyan-500 hover:bg-cyan-400 text-black py-3 rounded-full font-bold duration-300">
+
+                    Proceed to Checkout
+
+                </button>
+
+            </div>
+
+            </div>
+
+
+            <!-- Cart Overlay -->
+
+            <div 
+            id="cartOverlay" 
+            class="fixed inset-0 bg-black/50 hidden z-[998]">
+
+            </div>
+
+            <!-- ================= CART SIDEBAR END ================= -->
+
+            <!-- ================= AUTH MODALS START ================= -->
+
+            <!-- Auth Overlay -->
+            <div id="authOverlay"
+            class="fixed inset-0 bg-black/70 backdrop-blur-sm hidden z-[999] flex items-center justify-center px-5">
+
+            <!-- LOGIN MODAL -->
+            <div id="loginModal"
+                class="relative w-full max-w-md bg-[#121826] border border-cyan-500/30 rounded-3xl shadow-2xl p-8">
+
+                <!-- Close -->
+                <button id="closeAuth"
+                    class="absolute top-5 right-5 text-3xl text-gray-400 hover:text-red-400 transition">
+                    &times;
+                </button>
+
+                <!-- Icon -->
+                <div class="w-20 h-20 mx-auto rounded-full bg-cyan-500 flex items-center justify-center text-black text-3xl mb-5">
+                    <i class="fa-regular fa-user"></i>
+                </div>
+
+                <div class="text-center mb-7">
+
+                    <h2 class="text-3xl font-orbitron font-bold text-cyan-400">
+                        Welcome Back
+                    </h2>
+
+                    <p class="text-gray-400 mt-2">
+                        Login to your Nexora account
+                    </p>
+
+                </div>
+
+                <form id="loginForm" class="space-y-5">
+
+                    <!-- Email -->
+                    <div>
+
+                        <label class="block text-sm mb-2">
+                            Email Address
+                        </label>
+
+                        <input
+                            id="loginEmail"
+                            type="email"
+                            placeholder="Enter your email"
+                            class="w-full bg-[#0B1120] border border-gray-700 rounded-xl px-4 py-3 outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/20 transition">
+
+                    </div>
+
+                    <!-- Password -->
+                    <div>
+
+                        <label class="block text-sm mb-2">
+                            Password
+                        </label>
+
+                        <div class="relative">
+
+                            <input
+                                id="loginPassword"
+                                type="password"
+                                placeholder="Enter your password"
+                                class="w-full bg-[#0B1120] border border-gray-700 rounded-xl px-4 py-3 pr-12 outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/20 transition">
+
+                            <button
+                                type="button"
+                                id="toggleLoginPassword"
+                                class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-cyan-400">
+
+                                <i class="fa-regular fa-eye"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Remember -->
+                    <div class="flex items-center justify-between text-sm">
+
+                        <label class="flex items-center gap-2 cursor-pointer">
+
+                            <input
+                                id="rememberMe"
+                                type="checkbox"
+                                class="accent-cyan-400">
+
+                            Remember Me
+
+                        </label>
+
+                    </div>
+
+                    <!-- Login -->
+                    <button
+                        type="submit"
+                        class="w-full bg-cyan-500 hover:bg-cyan-400 text-black py-3 rounded-xl font-bold transition shadow-lg shadow-cyan-500/20">
+
+                        <i class="fa-solid fa-right-to-bracket mr-2"></i>
+
+                        Login
+
+                    </button>
+
+                </form>
+
+                <!-- Register -->
+                <p class="text-center text-gray-400 mt-6">
+
+                    Don't have an account?
+
+                    <button
+                        id="showRegister"
+                        class="text-cyan-400 hover:underline font-semibold">
+
+                      REGISTER
+
+                    </button>
+
+                </p>
+
+            </div>
+
+
+            <!-- REGISTER MODAL -->
+            <div id="registerModal"
+                class="relative w-full max-w-md bg-[#121826] border border-purple-500/30 rounded-3xl shadow-2xl p-8 hidden">
+
+                <!-- Close -->
+                <button id="closeRegister"
+                    class="absolute top-5 right-5 text-3xl text-gray-400 hover:text-red-400 transition">
+
+                    &times;
+
+                </button>
+
+                <!-- Icon -->
+                <div class="w-20 h-20 mx-auto rounded-full bg-purple-500 flex items-center justify-center text-white text-3xl mb-5">
+
+                    <i class="fa-solid fa-user-plus"></i>
+
+                </div>
+
+                <div class="text-center mb-7">
+
+                    <h2 class="text-3xl font-orbitron font-bold text-purple-400">
+
+                        Create Account
+
+                    </h2>
+
+                    <p class="text-gray-400 mt-2">
+
+                        Join the Nexora community
+
+                    </p>
+
+                </div>
+
+                <form id="registerForm" class="space-y-4">
+
+                    <!-- Name -->
+                    <div>
+
+                        <label class="block text-sm mb-2">
+                            Full Name
+                        </label>
+
+                        <input
+                            id="registerName"
+                            type="text"
+                            placeholder="Enter your name"
+                            class="w-full bg-[#0B1120] border border-gray-700 rounded-xl px-4 py-3 outline-none focus:border-purple-400 transition">
+
+                    </div>
+
+                    <!-- Email -->
+                    <div>
+
+                        <label class="block text-sm mb-2">
+                            Email Address
+                        </label>
+
+                        <input
+                            id="registerEmail"
+                            type="email"
+                            placeholder="Enter your email"
+                            class="w-full bg-[#0B1120] border border-gray-700 rounded-xl px-4 py-3 outline-none focus:border-purple-400 transition">
+
+                    </div>
+
+                    <!-- Password -->
+                    <div>
+
+                        <label class="block text-sm mb-2">
+                            Password
+                        </label>
+
+                        <div class="relative">
+
+                            <input
+                                id="registerPassword"
+                                type="password"
+                                placeholder="Create a password"
+                                class="w-full bg-[#0B1120] border border-gray-700 rounded-xl px-4 py-3 pr-12 outline-none focus:border-purple-400 transition">
+
+                            <button
+                                type="button"
+                                id="toggleRegisterPassword"
+                                class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-purple-400">
+
+                                <i class="fa-regular fa-eye"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Confirm -->
+                    <div>
+
+                        <label class="block text-sm mb-2">
+                            Confirm Password
+                        </label>
+
+                        <input
+                            id="registerConfirmPassword"
+                            type="password"
+                            placeholder="Confirm your password"
+                            class="w-full bg-[#0B1120] border border-gray-700 rounded-xl px-4 py-3 outline-none focus:border-purple-400 transition">
+
+                    </div>
+
+                    <!-- Register -->
+                    <button
+                        type="submit"
+                        class="w-full bg-purple-500 hover:bg-purple-400 text-white py-3 rounded-xl font-bold transition shadow-lg shadow-purple-500/20">
+
+                        <i class="fa-solid fa-user-plus mr-2"></i>
+
+                        Create Account
+
+                    </button>
+
+                </form>
+
+                <p class="text-center text-gray-400 mt-6">
+
+                    Already have an account?
+
+                    <button
+                        id="showLogin"
+                        class="text-cyan-400 hover:underline font-semibold">
+
+                        Login
+
+                    </button>
+
+                </p>
+
+            </div>
+                            
+            <!-- ================= PROFILE MODAL START ================= -->
+
+            <div id="profileModal"
+                class="w-full max-w-md bg-[#121826] border border-cyan-500/30 rounded-3xl shadow-2xl p-8 hidden">
+
+            <!-- Close -->
+            <button
+                id="closeProfile"
+                type="button"
+                class="absolute top-5 right-5 text-3xl text-gray-400 hover:text-red-400 transition">
+
+                &times;
+
+            </button>
+
+
+            <!-- Icon -->
+            <div class="w-20 h-20 mx-auto rounded-full bg-cyan-500 flex items-center justify-center text-black text-3xl mb-5">
+
+                <i class="fa-regular fa-user"></i>
+
+            </div>
+
+
+            <!-- Heading -->
+            <div class="text-center mb-7">
+
+                <h2 class="text-3xl font-orbitron font-bold text-cyan-400">
+
+                    My Profile
+
+                </h2>
+
+                <p class="text-gray-400 mt-2">
+
+                    Manage your Nexora account
+
+                </p>
+
+            </div>
+
+
+            <!-- User Name -->
+            <div class="mb-5">
+
+                <label class="block text-sm mb-2">
+
+                    Full Name
+
+                </label>
+
+                <input
+                    id="profileName"
+                    type="text"
+                    placeholder="Enter your name"
+                    class="w-full bg-[#0B1120] border border-gray-700 rounded-xl px-4 py-3 outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/20 transition">
+
+            </div>
+
+
+            <!-- Email -->
+            <div class="mb-6">
+
+                <label class="block text-sm mb-2">
+
+                    Email Address
+
+                </label>
+
+                <input
+                    id="profileEmail"
+                    type="email"
+                    readonly
+                    class="w-full bg-[#0B1120] border border-gray-700 rounded-xl px-4 py-3 text-gray-400 cursor-not-allowed outline-none">
+
+            </div>
+
+
+            <!-- Save Changes -->
+            <button
+                id="saveProfileBtn"
+                type="button"
+                class="w-full bg-cyan-500 hover:bg-cyan-400 text-black py-3 rounded-xl font-bold transition shadow-lg shadow-cyan-500/20">
+
+                <i class="fa-solid fa-floppy-disk mr-2"></i>
+
+                Save Changes
+
+            </button>
+
+
+            <!-- Logout -->
+            <button
+                id="logoutBtn"
+                type="button"
+                class="w-full mt-3 bg-red-500/10 hover:bg-red-500 text-red-400 hover:text-white border border-red-500/30 py-3 rounded-xl font-bold transition">
+
+                <i class="fa-solid fa-right-from-bracket mr-2"></i>
+
+                Logout
+
+            </button>
+
+            </div>
+
+            <!-- ================= PROFILE MODAL END ================= -->
+
+        </div>
+
+            <!-- ================= AUTH MODALS END ================= -->
+
+            <!-- ================= HERO SECTION ================= -->
+
+            <section
+                class="relative min-h-[calc(100vh-80px)] overflow-hidden bg-[#070B14] flex items-center pt-28 pb-16 lg:pt-0 lg:pb-0">
+
+                <!-- Background Glow -->
+
+                <div
+                    class="absolute -top-40 -left-40 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl">
+
+                </div>
+
+                <div
+                    class="absolute -bottom-40 -right-40 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl">
+                </div>
+
+
+                <!-- Hero Container -->
+
+                <div
+                    class="w-full max-w-[1600px] mx-auto px-6 sm:px-10 lg:px-14 xl:px-20">
+
+                    <div
+                        class="grid lg:grid-cols-[0.95fr_1.05fr] items-center gap-16 xl:gap-28">
+
+
+                        <!-- ================= LEFT CONTENT ================= -->
+
+                        <div
+                            class="text-left lg:pl-0 xl:pl-2">
+
+                            <!-- Small Badge -->
+
+                            <div
+                                class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-400/20 text-cyan-400 text-sm font-medium mb-6">
+
+                                <span class="animate-pulse">
+                                    🚀
+                                </span>
+
+                                Level Up Your Gaming Setup
+
+                            </div>
+
+
+                            <!-- Heading -->
+
+                            <h1
+                                class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-tight tracking-tight">
+
+                                <span class="text-white">
+                                    Premium Gaming Gear
+                                </span>
+
+                                <br>
+
+                                <span class="text-cyan-400">
+                                    For Every Creator
+                                </span>
+
+                            </h1>
+
+
+                            <!-- Description -->
+
+                            <p
+                                class="mt-6 max-w-2xl text-gray-400 text-base sm:text-lg leading-relaxed">
+
+                                Discover high-performance gaming laptops, RGB accessories,
+                                streaming equipment, mechanical keyboards, gaming chairs
+                                and everything you need to build your dream battle station.
+
+                            </p>
+
+
+                            <!-- Buttons -->
+
+                            <div
+                                class="mt-8 flex flex-wrap items-center gap-4">
+
+                                <a
+                                    href="products.html"
+                                    class="inline-flex items-center gap-2 bg-cyan-500 hover:bg-cyan-400 text-black px-7 py-3.5 rounded-full font-bold transition-all duration-300 shadow-lg shadow-cyan-500/20 hover:shadow-cyan-400/40 hover:-translate-y-1">
+
+                                    Shop Now
+
+                                    <i class="fa-solid fa-arrow-right"></i>
+
+                                </a>
+
+
+                                <a
+                                    href="index.html#categories"
+                                    class="inline-flex items-center gap-2 border border-gray-700 hover:border-cyan-400 text-white hover:text-cyan-400 px-7 py-3.5 rounded-full font-semibold transition-all duration-300 hover:-translate-y-1">
+
+                                    Explore Gear
+
+                                    <i class="fa-solid fa-bolt"></i>
+
+                                </a>
+
+                            </div>
+
+
+                            <!-- Stats -->
+
+                            <div
+                                class="mt-12 grid grid-cols-3 gap-5 max-w-xl">
+
+                                <!-- Stat -->
+
+                                <div>
+
+                                    <h3
+                                        class="text-2xl sm:text-3xl font-bold text-cyan-400">
+
+                                        10K+
+
+                                    </h3>
+
+                                    <p
+                                        class="mt-1 text-sm text-gray-500">
+
+                                        Happy Customers
+
+                                    </p>
+
+                                </div>
+
+
+                                <!-- Stat -->
+
+                                <div>
+
+                                    <h3
+                                        class="text-2xl sm:text-3xl font-bold text-cyan-400">
+
+                                        500+
+
+                                    </h3>
+
+                                    <p
+                                        class="mt-1 text-sm text-gray-500">
+
+                                        Premium Products
+
+                                    </p>
+
+                                </div>
+
+
+                                <!-- Stat -->
+
+                                <div>
+
+                                    <h3
+                                        class="text-2xl sm:text-3xl font-bold text-cyan-400">
+
+                                        24/7
+
+                                    </h3>
+
+                                    <p
+                                        class="mt-1 text-sm text-gray-500">
+
+                                        Support
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- ================= RIGHT IMAGE ================= -->
+
+                        <div
+                            class="relative flex justify-center lg:justify-end lg:pr-0 xl:pr-2">
+
+                            <!-- Glow -->
+
+                            <div
+                                class="absolute w-[70%] h-[70%] bg-cyan-500/20 blur-[100px] rounded-full">
+                            </div>
+
+
+                            <!-- Image -->
+
+                            <div
+                                class="relative w-full max-w-[680px]">
+
+                                <img
+                                    src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=1200&q=85"
+                                    alt="Premium Gaming Setup"
+                                    class="w-full h-auto object-cover rounded-3xl border border-cyan-400/20 shadow-2xl shadow-cyan-500/10">
+
+                                <!-- Floating Badge -->
+
+                                <div
+                                   class="absolute bottom-4 left-4 sm:-bottom-5 sm:-left-5 lg:-bottom-5 lg:-left-5 bg-[#121826]/95 backdrop-blur-xl border border-cyan-400/20 rounded-2xl px-4 sm:px-5 py-3 
+                                   sm:py-4 shadow-xl max-w-[calc(100%-2rem)]">
+
+                                    <div class="flex items-center gap-3">
+
+                                        <div
+                                            class="w-11 h-11 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-400">
+
+                                            <i class="fa-solid fa-gamepad text-xl"></i>
+
+                                        </div>
+
+                                        <div>
+
+                                            <p class="text-xs text-gray-500">
+                                                Built for
+                                            </p>
+
+                                            <p class="font-bold text-white">
+                                                Gamers & Creators
+                                            </p>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                                
+            </section>                
+
+            <!-- ================= HERO SECTION END ================= -->
+           
+            <!-- ================= CATEGORIES SECTION ================= -->
+
+<section
+    id="categories"
+    class="relative py-24 bg-[#070B14] overflow-hidden">
+
+    <!-- Background Glow -->
+
+    <div
+        class="absolute top-20 left-0 w-72 h-72 bg-cyan-500/10 rounded-full blur-[100px]">
+    </div>
+
+    <div
+        class="absolute bottom-0 right-0 w-72 h-72 bg-purple-500/10 rounded-full blur-[100px]">
+    </div>
+
+
+    <!-- Container -->
+
+    <div
+        class="relative w-full max-w-[1600px] mx-auto px-6 sm:px-10 lg:px-14 xl:px-20">
+
+
+        <!-- ================= SECTION HEADING ================= -->
+
+        <div class="text-center max-w-3xl mx-auto mb-14">
+
+            <span
+                class="inline-flex items-center gap-2 px-4 py-2 rounded-full
+                       bg-cyan-500/10 border border-cyan-400/20
+                       text-cyan-400 text-sm font-semibold mb-5">
+
+                <i class="fa-solid fa-layer-group"></i>
+
+                Explore Categories
+
+            </span>
+
+
+            <h2
+                class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white">
+
+                Gear Up For Your
+
+                <span class="text-cyan-400">
+                    Next Level
+                </span>
+
+            </h2>
+
+
+            <p
+                class="mt-5 text-gray-400 text-base sm:text-lg leading-relaxed">
+
+                Explore premium gaming and creator gear designed to
+                upgrade your setup, boost your performance and bring
+                your ultimate battle station to life.
+
+            </p>
+
+        </div>
+
+
+        <!-- ================= CATEGORY GRID ================= -->
+
+        <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+
+            <!-- ================= CATEGORY 1 ================= -->
+            <!-- GAMING LAPTOPS -->
+
+            <div
+                class="group relative h-72 overflow-hidden rounded-3xl
+                       border border-gray-800
+                       hover:border-cyan-400/50
+                       transition-all duration-500">
+
+                <img
+                    src="https://images.unsplash.com/photo-1640955014216-75201056c829?auto=format&fit=crop&w=900&q=85"
+                    alt="Gaming Laptops"
+                    class="absolute inset-0 w-full h-full object-cover
+                           transition-transform duration-700
+                           group-hover:scale-110">
+
+                <div
+                    class="absolute inset-0
+                           bg-gradient-to-t from-black via-black/50 to-transparent">
+                </div>
+
+
+                <div
+                    class="absolute bottom-0 left-0 right-0 p-7">
+
+                    <div
+                        class="w-12 h-12 rounded-xl
+                               bg-cyan-500/20 backdrop-blur-md
+                               border border-cyan-400/20
+                               flex items-center justify-center
+                               text-cyan-400 text-xl mb-4">
+
+                        <i class="fa-solid fa-laptop"></i>
+
+                    </div>
+
+
+                    <h3
+                        class="text-2xl font-bold text-white">
+
+                        Gaming Laptops
+
+                    </h3>
+
+
+                    <p
+                        class="text-gray-400 mt-1">
+
+                        High-performance gaming machines
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= CATEGORY 2 ================= -->
+            <!-- KEYBOARDS -->
+
+            <div
+                class="group relative h-72 overflow-hidden rounded-3xl
+                       border border-gray-800
+                       hover:border-purple-400/50
+                       transition-all duration-500">
+
+                <img
+                    src="https://images.unsplash.com/photo-1541140532154-b024d705b90a?auto=format&fit=crop&w=900&q=85"
+                    alt="Mechanical Keyboards"
+                    class="absolute inset-0 w-full h-full object-cover
+                           transition-transform duration-700
+                           group-hover:scale-110">
+
+                <div
+                    class="absolute inset-0
+                           bg-gradient-to-t from-black via-black/50 to-transparent">
+                </div>
+
+
+                <div
+                    class="absolute bottom-0 left-0 right-0 p-7">
+
+                    <div
+                        class="w-12 h-12 rounded-xl
+                               bg-purple-500/20 backdrop-blur-md
+                               border border-purple-400/20
+                               flex items-center justify-center
+                               text-purple-400 text-xl mb-4">
+
+                        <i class="fa-solid fa-keyboard"></i>
+
+                    </div>
+
+
+                    <h3
+                        class="text-2xl font-bold text-white">
+
+                        Mechanical Keyboards
+
+                    </h3>
+
+
+                    <p
+                        class="text-gray-400 mt-1">
+
+                        RGB precision and performance
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= CATEGORY 3 ================= -->
+            <!-- GAMING Mouse -->
+
+            <div
+                class="group relative h-72 overflow-hidden rounded-3xl
+                       border border-gray-800
+                       hover:border-pink-400/50
+                       transition-all duration-500">
+
+                <img
+                    src="https://images.unsplash.com/photo-1629083255546-92b8587eb116?auto=format&fit=crop&w=900&q=85"
+                    alt="Gaming Mouse"
+                    class="absolute inset-0 w-full h-full object-cover
+                           transition-transform duration-700
+                           group-hover:scale-110">
+
+                <div
+                    class="absolute inset-0
+                           bg-gradient-to-t from-black via-black/50 to-transparent">
+                </div>
+
+
+                <div
+                    class="absolute bottom-0 left-0 right-0 p-7">
+
+                    <div
+                        class="w-12 h-12 rounded-xl
+                               bg-pink-500/20 backdrop-blur-md
+                               border border-pink-400/20
+                               flex items-center justify-center
+                               text-pink-400 text-xl mb-4">
+
+                        <i class="fa-solid fa-computer-mouse"></i>
+
+                    </div>
+
+
+                    <h3
+                        class="text-2xl font-bold text-white">
+
+                        Gaming Mouse
+
+                    </h3>
+
+
+                    <p
+                        class="text-gray-400 mt-1">
+
+                        Speed, accuracy and control
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= CATEGORY 4 ================= -->
+            <!-- HEADSETS -->
+
+            <div
+                class="group relative h-72 overflow-hidden rounded-3xl
+                       border border-gray-800
+                       hover:border-green-400/50
+                       transition-all duration-500">
+
+                <img
+                    src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=900&q=85"
+                    alt="Gaming Headsets"
+                    class="absolute inset-0 w-full h-full object-cover
+                           transition-transform duration-700
+                           group-hover:scale-110">
+
+                <div
+                    class="absolute inset-0
+                           bg-gradient-to-t from-black via-black/50 to-transparent">
+                </div>
+
+
+                <div
+                    class="absolute bottom-0 left-0 right-0 p-7">
+
+                    <div
+                        class="w-12 h-12 rounded-xl
+                               bg-green-500/20 backdrop-blur-md
+                               border border-green-400/20
+                               flex items-center justify-center
+                               text-green-400 text-xl mb-4">
+
+                        <i class="fa-solid fa-headset"></i>
+
+                    </div>
+
+
+                    <h3
+                        class="text-2xl font-bold text-white">
+
+                        Gaming Headsets
+
+                    </h3>
+
+
+                    <p
+                        class="text-gray-400 mt-1">
+
+                        Immersive sound experience
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= CATEGORY 5 ================= -->
+            <!-- GAMING CHAIRS -->
+
+            <div
+                class="group relative h-72 overflow-hidden rounded-3xl
+                       border border-gray-800
+                       hover:border-orange-400/50
+                       transition-all duration-500">
+
+                <img
+                    src="https://images.unsplash.com/photo-1770195483917-b3bb444b7a29?auto=format&fit=crop&w=900&q=85"
+                    alt="Gaming Chairs"
+                    class="absolute inset-0 w-full h-full object-cover
+                           transition-transform duration-700
+                           group-hover:scale-110">
+
+                <div
+                    class="absolute inset-0
+                           bg-gradient-to-t from-black via-black/50 to-transparent">
+                </div>
+
+
+                <div
+                    class="absolute bottom-0 left-0 right-0 p-7">
+
+                    <div
+                        class="w-12 h-12 rounded-xl
+                               bg-orange-500/20 backdrop-blur-md
+                               border border-orange-400/20
+                               flex items-center justify-center
+                               text-orange-400 text-xl mb-4">
+
+                        <i class="fa-solid fa-chair"></i>
+
+                    </div>
+
+
+                    <h3
+                        class="text-2xl font-bold text-white">
+
+                        Gaming Chairs
+
+                    </h3>
+
+
+                    <p
+                        class="text-gray-400 mt-1">
+
+                        Comfort for long gaming sessions
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= CATEGORY 6 ================= -->
+            <!-- MICROPHONES -->
+
+            <div
+                class="group relative h-72 overflow-hidden rounded-3xl
+                       border border-gray-800
+                       hover:border-red-400/50
+                       transition-all duration-500">
+
+                <img
+                    src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=900&q=85"
+                    alt="Streaming Microphones"
+                    class="absolute inset-0 w-full h-full object-cover
+                           transition-transform duration-700
+                           group-hover:scale-110">
+
+                <div
+                    class="absolute inset-0
+                           bg-gradient-to-t from-black via-black/50 to-transparent">
+                </div>
+
+
+                <div
+                    class="absolute bottom-0 left-0 right-0 p-7">
+
+                    <div
+                        class="w-12 h-12 rounded-xl
+                               bg-red-500/20 backdrop-blur-md
+                               border border-red-400/20
+                               flex items-center justify-center
+                               text-red-400 text-xl mb-4">
+
+                        <i class="fa-solid fa-microphone"></i>
+
+                    </div>
+
+
+                    <h3
+                        class="text-2xl font-bold text-white">
+
+                        Streaming Microphones
+
+                    </h3>
+
+
+                    <p
+                        class="text-gray-400 mt-1">
+
+                        Crystal-clear creator audio
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= CATEGORY 7 ================= -->
+            <!-- MONITORS -->
+
+            <div
+                class="group relative h-72 overflow-hidden rounded-3xl
+                       border border-gray-800
+                       hover:border-blue-400/50
+                       transition-all duration-500">
+
+                <img
+                    src="https://www.techpowerup.com/img/2Cz9o27coOkexrtr.jpg?auto=format&fit=crop&w=900&q=85"
+                    alt="Gaming Monitors"
+                    class="absolute inset-0 w-full h-full object-cover
+                           transition-transform duration-700
+                           group-hover:scale-110">
+
+                <div
+                    class="absolute inset-0
+                           bg-gradient-to-t from-black via-black/50 to-transparent">
+                </div>
+
+
+                <div
+                    class="absolute bottom-0 left-0 right-0 p-7">
+
+                    <div
+                        class="w-12 h-12 rounded-xl
+                               bg-blue-500/20 backdrop-blur-md
+                               border border-blue-400/20
+                               flex items-center justify-center
+                               text-blue-400 text-xl mb-4">
+
+                        <i class="fa-solid fa-desktop"></i>
+
+                    </div>
+
+
+                    <h3
+                        class="text-2xl font-bold text-white">
+
+                        Gaming Monitors
+
+                    </h3>
+
+
+                    <p
+                        class="text-gray-400 mt-1">
+
+                        Ultra-wide immersive displays
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= CATEGORY 8 ================= -->
+            <!-- STREAMING KITS -->
+
+            <div
+                class="group relative h-72 overflow-hidden rounded-3xl
+                       border border-gray-800
+                       hover:border-violet-400/50
+                       transition-all duration-500">
+
+                <img
+                    src="https://images.unsplash.com/photo-1675301909821-2541a0db13ab?auto=format&fit=crop&w=900&q=85"
+                    alt="Streaming Kits"
+                    class="absolute inset-0 w-full h-full object-cover
+                           transition-transform duration-700
+                           group-hover:scale-110">
+
+                <div
+                    class="absolute inset-0
+                           bg-gradient-to-t from-black via-black/50 to-transparent">
+                </div>
+
+
+                <div
+                    class="absolute bottom-0 left-0 right-0 p-7">
+
+                    <div
+                        class="w-12 h-12 rounded-xl
+                               bg-violet-500/20 backdrop-blur-md
+                               border border-violet-400/20
+                               flex items-center justify-center
+                               text-violet-400 text-xl mb-4">
+
+                        <i class="fa-solid fa-video"></i>
+
+                    </div>
+
+
+                    <h3
+                        class="text-2xl font-bold text-white">
+
+                        Streaming Kits
+
+                    </h3>
+
+
+                    <p
+                        class="text-gray-400 mt-1">
+
+                        Create, stream and inspire
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+                   <!-- ================= CATEGORIES SECTION END ================= -->
+
+                       <!-- ================= DEALS SECTION ================= -->
+
+                <section
+                    id="deals"
+                    class="relative py-24 bg-[#070B14] overflow-hidden">
+
+                    <!-- Background Glow -->
+
+                    <div
+                        class="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-[130px]">
+                    </div>
+
+                    <div
+                        class="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-[130px]">
+                    </div>
+
+
+                    <!-- Container -->
+
+                    <div
+                        class="relative max-w-[1600px] mx-auto px-6 sm:px-10 lg:px-14 xl:px-20">
+
+
+        <!-- ================= HEADING ================= -->
+
+        <div class="text-center mb-14">
+
+            <span
+                class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/10 border border-red-400/20 text-red-400 text-sm font-semibold mb-5">
+
+                <i class="fa-solid fa-fire"></i>
+
+                Limited Time Offers
+
+            </span>
+
+
+            <h2
+                class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white">
+
+                Today's
+
+                <span class="text-cyan-400">
+                    Hot Deals
+                </span>
+
+            </h2>
+
+
+            <p
+                class="mt-5 text-gray-400 max-w-2xl mx-auto">
+
+                Grab premium gaming and creator gear at exclusive
+                prices before these offers disappear.
+
+            </p>
+
+        </div>
+
+
+        <!-- ================= COUNTDOWN ================= -->
+
+        <div
+            class="flex flex-wrap justify-center gap-3 sm:gap-5 mb-12">
+
+            <div
+                class="w-20 sm:w-24 h-20 sm:h-24 rounded-2xl bg-[#121826] border border-cyan-500/20 flex flex-col items-center justify-center">
+
+                <span
+                    id="dealDays"
+                    class="text-2xl sm:text-3xl font-extrabold text-cyan-400">
+                    00
+                </span>
+
+                <span class="text-xs text-gray-500 uppercase">
+                    Days
+                </span>
+
+            </div>
+
+
+            <div
+                class="w-20 sm:w-24 h-20 sm:h-24 rounded-2xl bg-[#121826] border border-cyan-500/20 flex flex-col items-center justify-center">
+
+                <span
+                    id="dealHours"
+                    class="text-2xl sm:text-3xl font-extrabold text-cyan-400">
+                    00
+                </span>
+
+                <span class="text-xs text-gray-500 uppercase">
+                    Hours
+                </span>
+
+            </div>
+
+
+            <div
+                class="w-20 sm:w-24 h-20 sm:h-24 rounded-2xl bg-[#121826] border border-cyan-500/20 flex flex-col items-center justify-center">
+
+                <span
+                    id="dealMinutes"
+                    class="text-2xl sm:text-3xl font-extrabold text-cyan-400">
+                    00
+                </span>
+
+                <span class="text-xs text-gray-500 uppercase">
+                    Minutes
+                </span>
+
+            </div>
+
+
+            <div
+                class="w-20 sm:w-24 h-20 sm:h-24 rounded-2xl bg-[#121826] border border-cyan-500/20 flex flex-col items-center justify-center">
+
+                <span
+                    id="dealSeconds"
+                    class="text-2xl sm:text-3xl font-extrabold text-cyan-400">
+                    00
+                </span>
+
+                <span class="text-xs text-gray-500 uppercase">
+                    Seconds
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= DEAL PRODUCTS ================= -->
+
+        <div
+            class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-7">
+
+
+            <!-- DEAL 1 -->
+
+            <div
+               class="product-card group bg-[#121826] border border-gray-800 hover:border-cyan-400/40 rounded-3xl overflow-hidden transition-all duration-500 hover:-translate-y-2 flex flex-col h-full">
+
+                <div class="relative h-72 overflow-hidden">
+
+                    <img
+                        src="https://www.redragonpakistan.pk/cdn/shop/files/Redragon-K617-Fizz-Black-RGB-Wired-Keyboard-Front.webp?auto=format&fit=crop&w=1000&q=85"
+                        alt="RGB Mechanical Keyboard"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+
+
+                    <span
+                        class="absolute top-5 left-5 bg-red-500 text-white font-bold text-sm px-4 py-2 rounded-full">
+
+                        -30%
+
+                    </span>
+
+
+                   <button
+                        class="wishlist-product absolute top-5 right-5 w-11 h-11 rounded-full bg-black/60 backdrop-blur-md text-white flex items-center justify-center hover:bg-pink-500 transition"
+                        data-product="nexora RGB Mechanical Keyboard"
+                        data-price="89.99"
+                        data-image="https://www.redragonpakistan.pk/cdn/shop/files/Redragon-K617-Fizz-Black-RGB-Wired-Keyboard-Front.webp?auto=format&fit=crop&w=1000&q=85">
+
+                        <i class="fa-regular fa-heart"></i>
+
+                    </button>
+
+                </div>
+
+
+                <div class="p-6 flex flex-col flex-1">
+
+                    <span
+                        class="text-cyan-400 text-xs uppercase tracking-wider font-semibold">
+
+                        Mechanical Keyboard
+
+                    </span>
+
+
+                    <h3
+                        class="text-2xl font-bold text-white mt-2">
+
+                        NEXORA RGB Mechanical Keyboard
+
+                    </h3>
+
+                            <!-- $-->
+                    <div class="mt-auto pt-5">
+
+                        <span
+                            class="text-gray-500 line-through text-lg">
+
+                            $129.99
+
+                        </span>
+
+                        <span
+                            class="text-2xl font-extrabold text-cyan-400">
+
+                            $89.99
+
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        class="add-to-cart mt-4 w-full py-3.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-black font-bold transition"
+                        data-product="nexora RGB Mechanical Keyboard"
+                        data-price="89.99"
+                        data-image="https://www.redragonpakistan.pk/cdn/shop/files/Redragon-K617-Fizz-Black-RGB-Wired-Keyboard-Front.webp?auto=format&fit=crop&w=1000&q=85">
+
+                        <i class="fa-solid fa-cart-shopping mr-2"></i>
+                        Add to Cart
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- DEAL 2 -->
+
+            <div
+               class="product-card group bg-[#121826] border border-gray-800 hover:border-cyan-400/40 rounded-3xl overflow-hidden transition-all duration-500 hover:-translate-y-2 flex flex-col h-full">
+                <div class="relative h-72 overflow-hidden">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1618499893452-942141785a2a"
+                        alt="Gaming Mouse"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+
+
+                    <span
+                        class="absolute top-5 left-5 bg-purple-500 text-white font-bold text-sm px-4 py-2 rounded-full">
+
+                        -25%
+
+                    </span>
+
+
+                  <button
+                        class="wishlist-product absolute top-5 right-5 w-11 h-11 rounded-full bg-black/60 backdrop-blur-md text-white flex items-center justify-center hover:bg-pink-500 transition"
+                        data-product="Superstrike Gaming Mouse"
+                        data-price="59.99"
+                        data-image="https://images.unsplash.com/photo-1618499893452-942141785a2a">
+
+                        <i class="fa-regular fa-heart"></i>
+
+                    </button>
+
+                </div>
+
+
+               <div class="p-6 flex flex-col flex-1">
+
+                    <span
+                        class="text-cyan-400 text-xs uppercase tracking-wider font-semibold">
+
+                        Gaming Mouse
+
+                    </span>
+
+
+                    <h3
+                        class="text-2xl font-bold text-white mt-2">
+
+                        Superstrike Gaming Mouse
+
+                    </h3>
+
+
+                    <div class="mt-auto pt-5">
+
+                        <span
+                            class="text-gray-500 line-through text-lg">
+
+                            $79.99
+
+                        </span>
+
+                        <span
+                            class="text-2xl font-extrabold text-cyan-400">
+
+                            $59.99
+
+                        </span>
+
+                    </div>
+
+
+                     <button
+                            class="add-to-cart mt-4 w-full py-3.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-black font-bold transition"
+                            data-product="Superstrike Gaming Mouse"
+                            data-price="59.99"
+                            data-image="https://images.unsplash.com/photo-1618499893452-942141785a2a">
+
+                            <i class="fa-solid fa-cart-shopping mr-2"></i>
+                            Add to Cart
+
+                        </button>
+
+                    </div>
+            </div>
+
+
+            <!-- DEAL 3 -->
+
+            <div
+               class="product-card group bg-[#121826] border border-gray-800 hover:border-cyan-400/40 rounded-3xl overflow-hidden transition-all duration-500 hover:-translate-y-2 flex flex-col h-full">
+
+                <div class="relative h-72 overflow-hidden">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1599669454699-248893623440?auto=format&fit=crop&w=1000&q=85"
+                        alt="Gaming Headset"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+
+
+                    <span
+                        class="absolute top-5 left-5 bg-green-500 text-black font-bold text-sm px-4 py-2 rounded-full">
+
+                        -20%
+
+                    </span>
+
+
+                    <button
+                        class="wishlist-product absolute top-5 right-5 w-11 h-11 rounded-full bg-black/60 backdrop-blur-md text-white flex items-center justify-center hover:bg-pink-500 transition"
+                        data-product="nexora Pro Gaming Headset"
+                        data-price="119.99"
+                        data-image="https://images.unsplash.com/photo-1599669454699-248893623440?auto=format&fit=crop&w=1000&q=85">
+
+                        <i class="fa-regular fa-heart"></i>
+
+                    </button>
+                    
+                </div>
+
+
+               <div class="p-6 flex flex-col flex-1">
+
+                    <span
+                        class="text-cyan-400 text-xs uppercase tracking-wider font-semibold">
+
+                        Gaming Headset
+
+                    </span>
+
+
+                    <h3
+                        class="text-2xl font-bold text-white mt-2">
+
+                        NEXORA Pro Gaming Headset
+
+                    </h3>
+
+
+                    <div class="mt-auto pt-5">
+
+                        <span
+                            class="text-gray-500 line-through text-lg">
+
+                            $149.99
+
+                        </span>
+
+                        <span
+                            class="text-2xl font-extrabold text-cyan-400">
+
+                            $119.99
+
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        class="add-to-cart mt-6 w-full py-3.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-black font-bold transition"
+                        data-product="nexora Pro Gaming Headset"
+                        data-price="119.99"
+                        data-image="https://images.unsplash.com/photo-1599669454699-248893623440?auto=format&fit=crop&w=1000&q=85">
+
+                        <i class="fa-solid fa-cart-shopping mr-2"></i>
+
+                        Add to Cart
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= DEAL CTA ================= -->
+
+        <div class="text-center mt-12">
+
+            <a
+                href="products.html"
+                class="inline-flex items-center gap-3 px-7 py-3.5 rounded-full border border-cyan-400/30 text-cyan-400 hover:bg-cyan-500 hover:text-black font-bold transition">
+
+                Explore All Products
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+                              <!-- ================= DEALS SECTION END ================= -->
+
+                                <!-- ================= FOOTER START ================= -->
+
+<footer class="bg-[#070D18] border-t border-cyan-500/20 text-gray-300">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 py-16">
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+            <!-- Brand -->
+            <div>
+
+                <a href="index.html" class="flex items-center gap-3 mb-5">
+
+                    <div
+                        class="w-12 h-12 rounded-full bg-cyan-500 flex items-center justify-center text-black font-bold text-xl shadow-lg shadow-cyan-500/30">
+                        N
+                    </div>
+
+                    <div>
+                        <h2 class="text-xl font-bold text-cyan-400">
+                             NEXORA
+                        </h2>
+
+                        <p class="text-xs text-gray-500">
+                            Premium Gaming & Creator Gear
+                        </p>
+                    </div>
+
+                </a>
+
+                <p class="text-sm leading-7 text-gray-400 max-w-sm">
+                    Power up your gaming and creator setup with premium gear
+                    built for performance, comfort and style.
+                </p>
+
+                <!-- Social Icons -->
+                <div class="flex gap-3 mt-6">
+
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-[#121826] border border-gray-700 flex items-center justify-center hover:bg-cyan-500 hover:text-black hover:border-cyan-500 transition">
+
+                        <i class="fa-brands fa-facebook-f"></i>
+
+                    </a>
+
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-[#121826] border border-gray-700 flex items-center justify-center hover:bg-cyan-500 hover:text-black hover:border-cyan-500 transition">
+
+                        <i class="fa-brands fa-instagram"></i>
+
+                    </a>
+
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-[#121826] border border-gray-700 flex items-center justify-center hover:bg-cyan-500 hover:text-black hover:border-cyan-500 transition">
+
+                        <i class="fa-brands fa-x-twitter"></i>
+
+                    </a>
+
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-[#121826] border border-gray-700 flex items-center justify-center hover:bg-cyan-500 hover:text-black hover:border-cyan-500 transition">
+
+                        <i class="fa-brands fa-youtube"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Quick Links -->
+            <div>
+
+                <h3 class="text-lg font-bold text-white mb-5">
+                    Quick Links
+                </h3>
+
+                <ul class="space-y-3 text-sm">
+
+                    <li>
+                        <a href="index.html"
+                            class="hover:text-cyan-400 transition">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="index.html#categories"
+                            class="hover:text-cyan-400 transition">
+                            Categories
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="products.html"
+                            class="hover:text-cyan-400 transition">
+                            Products
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="index.html#deals"
+                            class="hover:text-cyan-400 transition">
+                            Deals
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html"
+                            class="hover:text-cyan-400 transition">
+                            About Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html"
+                            class="hover:text-cyan-400 transition">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- Customer Support -->
+            <div>
+
+                <h3 class="text-lg font-bold text-white mb-5">
+                    Customer Support
+                </h3>
+
+                <ul class="space-y-4 text-sm">
+
+                    <li class="flex items-start gap-3">
+
+                        <i class="fa-solid fa-headset text-cyan-400 mt-1"></i>
+
+                        <span>
+                            24/7 Customer Support
+                        </span>
+
+                    </li>
+
+                    <li class="flex items-start gap-3">
+
+                        <i class="fa-solid fa-truck text-cyan-400 mt-1"></i>
+
+                        <span>
+                            Fast & Secure Delivery
+                        </span>
+
+                    </li>
+
+                    <li class="flex items-start gap-3">
+
+                        <i class="fa-solid fa-rotate-left text-cyan-400 mt-1"></i>
+
+                        <span>
+                            Easy Returns
+                        </span>
+
+                    </li>
+
+                    <li class="flex items-start gap-3">
+
+                        <i class="fa-solid fa-shield-halved text-cyan-400 mt-1"></i>
+
+                        <span>
+                            Secure Payments
+                        </span>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- Newsletter -->
+            <div>
+
+                <h3 class="text-lg font-bold text-white mb-5">
+                    Stay Updated
+                </h3>
+
+                <p class="text-sm text-gray-400 leading-6 mb-5">
+                    Subscribe to receive new product launches,
+                    exclusive deals and gaming gear updates.
+                </p>
+
+                <form id="newsletterForm" class="flex flex-col gap-3">
+
+                    <input
+                        id="newsletterEmail"
+                        type="email"
+                        placeholder="Enter your email"
+                        required
+                        class="w-full bg-[#121826] border border-gray-700 rounded-xl px-4 py-3 text-sm text-white placeholder-gray-500 outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/20 transition">
+
+                    <button
+                        type="submit"
+                        class="w-full py-3 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-black font-bold transition">
+
+                        <i class="fa-solid fa-paper-plane mr-2"></i>
+                        Subscribe
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+
+        <!-- Bottom Border -->
+        <div class="border-t border-gray-800 mt-12 pt-7">
+
+            <div
+                class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+
+                <p>
+                    © 2026 Nexora. All rights reserved.
+                </p>
+
+                <div class="flex gap-6">
+
+                    <a href="privacy.html"
+                        class="hover:text-cyan-400 transition">
+                        Privacy Policy
+                    </a>
+
+                    <a href="terms.html"
+                        class="hover:text-cyan-400 transition">
+                        Terms & Conditions
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+                               <!-- ================= FOOTER END ============================== -->
+
+                               <!-- ================= TOAST CONTAINER START ================= -->
+
+            <div
+                id="toastContainer"
+                class="fixed top-24 left-1/2 -translate-x-1/2 z-[9999] flex flex-col gap-3 pointer-events-none">
+            </div>
+
+                                <!-- ================= TOAST CONTAINER  END ================= -->
+
+      <script src="js/script.js"></script>   
+
+</body>
+
+</html>

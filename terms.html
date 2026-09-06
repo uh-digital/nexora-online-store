@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Terms & Conditions | Nexora</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- jsPDF -->
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js">
+    </script>
+
+</head>
+
+
+<body class="bg-[#0B1120] text-gray-300">
+
+
+    <!-- ================= NAVBAR START ================= -->
+
+    <nav
+        class="fixed top-0 left-0 w-full z-50 bg-[#0B1120]/95 backdrop-blur-lg border-b border-cyan-500/20">
+
+        <div class="w-full px-8 lg:px-12 xl:px-16">
+
+            <div class="h-20 grid grid-cols-3 items-center">
+
+
+                <!-- ================= LOGO ================= -->
+
+                 <div class="flex justify-start min-w-0">
+
+                <a href="#" class="flex items-center gap-2 sm:gap-3 min-w-0">
+                    
+                    <div
+                      class="w-10 h-10 sm:w-12 sm:h-12 shrink-0 rounded-full bg-cyan-500 flex items-center justify-center text-black font-bold text-lg sm:text-xl shadow-lg shadow-cyan-500/40">
+                        N
+
+                    </div>
+
+                        <div>
+
+                            <h1
+                                class="text-xl font-bold tracking-wider text-cyan-400">
+
+                                Nexora
+
+                            </h1>
+
+                            <p class="text-xs text-gray-400">
+
+                                Premium Gaming & Creator Gear
+
+                            </p>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+
+                <!-- ================= CENTER MENU ================= -->
+
+                <div class="hidden lg:flex justify-center">
+
+                    <ul class="flex items-center gap-8 font-medium">
+
+                        <li>
+
+                            <a
+                                href="index.html"
+                                class="hover:text-cyan-400 transition duration-300">
+
+                                Home
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a
+                                href="index.html#categories"
+                                class="hover:text-cyan-400 transition duration-300">
+
+                                Categories
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a
+                                href="products.html"
+                                class="hover:text-cyan-400 transition duration-300">
+
+                                Products
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a
+                                href="#deals"
+                                class="hover:text-cyan-400 transition duration-300">
+
+                                Deals
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a
+                                href="about.html"
+                                class="hover:text-cyan-400 transition duration-300">
+
+                                About
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- ================= RIGHT SIDE ================= -->
+
+                <div
+                    class="hidden lg:flex justify-end items-center gap-4">
+
+
+                    <!-- Contact -->
+
+                    <a
+                        href="contact.html"
+                        class="px-5 py-2.5 rounded-full border border-cyan-500/40 text-cyan-400 hover:bg-cyan-500 hover:text-black transition duration-300">
+
+                        <i class="fa-regular fa-envelope mr-2"></i>
+
+                        Contact
+
+                    </a>
+
+
+                    <!-- Download -->
+
+                    <button
+                        id="downloadTermsBtn"
+                        class="px-5 py-2.5 rounded-full bg-cyan-500 hover:bg-cyan-400 text-black font-bold transition duration-300 shadow-lg shadow-cyan-500/30">
+
+                        <i class="fa-solid fa-download mr-2"></i>
+
+                        Download
+
+                    </button>
+
+                </div>
+
+
+                 <!-- ================= Mobile Button ================= -->
+
+        <div class="lg:hidden col-span-2 flex justify-end">
+
+            <button
+                id="menuBtn"
+                type="button"
+                class="text-4xl text-cyan-400 hover:text-cyan-300 transition"
+                aria-label="Open Menu"
+                aria-expanded="false">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+        </div>
+
+        </div>
+
+        <!-- ================= Mobile Menu ================= -->
+
+        <div
+            id="mobileMenu"
+            class="hidden lg:hidden bg-[#101827] border-t border-cyan-500/20 px-6 py-6">
+
+            <div class="flex flex-col gap-4">
+
+                <a
+                    href="index.html"
+                    class="text-white hover:text-cyan-400 transition py-2">
+                    Home
+                </a>
+
+                <a
+                    href="index.html#categories"
+                    class="text-white hover:text-cyan-400 transition py-2">
+                    Categories
+                </a>
+
+                <a
+                    href="products.html"
+                    class="text-white hover:text-cyan-400 transition py-2">
+                    Products
+                </a>
+
+                <a
+                    href="index.html#deals"
+                    class="text-white hover:text-cyan-400 transition py-2">
+                    Deals
+                </a>
+
+                <a
+                    href="about.html"
+                    class="text-white hover:text-cyan-400 transition py-2">
+                    About
+                </a>
+
+                <a
+                    href="contact.html"
+                    class="text-white hover:text-cyan-400 transition py-2">
+                    Contact
+                </a>
+
+                <!-- Download -->
+
+                    <button
+                        id="mobiledownloadTermsBtn"
+                        class="px-5 py-2.5 rounded-full bg-cyan-500 hover:bg-cyan-400 text-black font-bold transition duration-300 shadow-lg shadow-cyan-500/30">
+
+                        <i class="fa-solid fa-download mr-2"></i>
+
+                        Download
+
+                    </button>
+
+
+                </div>
+                
+        </div>
+
+    </div>
+
+</nav>
+               <!-- ================= NAVBAR END ================= -->       
+
+
+    <!-- ================= TERMS & CONDITIONS ================= -->
+
+    <main class="pt-32 pb-20">
+
+        <div class="max-w-5xl mx-auto px-6">
+
+
+            <!-- ================= PAGE HEADER ================= -->
+
+            <div class="text-center mb-14">
+
+                <p
+                    class="text-cyan-400 text-sm font-semibold uppercase tracking-[0.25em] mb-4">
+
+                    Nexora Legal
+
+                </p>
+
+                <h1
+                    class="text-4xl md:text-5xl font-bold text-white mb-5">
+
+                    Terms & Conditions
+
+                </h1>
+
+                <p
+                    class="text-gray-400 max-w-2xl mx-auto leading-7">
+
+                    Please read these Terms & Conditions carefully before
+                    using the Nexora website and its services.
+
+                </p>
+
+                <p class="text-sm text-gray-500 mt-5">
+
+                    Last Updated: August 2026
+
+                </p>
+
+            </div>
+
+
+
+            <!-- ================= CONTENT CARD ================= -->
+
+            <div
+                class="bg-[#101827] border border-cyan-500/10 rounded-3xl p-7 md:p-10 shadow-2xl">
+
+
+                <!-- 1 -->
+
+                <section class="mb-10">
+
+                    <h2
+                        class="text-2xl font-bold text-white mb-4">
+
+                        1. Acceptance of Terms
+
+                    </h2>
+
+                    <p class="leading-8 text-gray-400">
+
+                        By accessing or using the Nexora website, you
+                        acknowledge that you have read, understood and
+                        agreed to these Terms & Conditions. If you do not
+                        agree with these terms, please discontinue use of
+                        the website.
+
+                    </p>
+
+                </section>
+
+
+
+                <!-- 2 -->
+
+                <section class="mb-10">
+
+                    <h2
+                        class="text-2xl font-bold text-white mb-4">
+
+                        2. Use of the Website
+
+                    </h2>
+
+                    <p class="leading-8 text-gray-400">
+
+                        Nexora provides an online shopping environment for
+                        gaming, computer and creator-related products.
+                        Users are expected to use the website responsibly
+                        and only for lawful purposes.
+
+                    </p>
+
+                </section>
+
+
+
+                <!-- 3 -->
+
+                <section class="mb-10">
+
+                    <h2
+                        class="text-2xl font-bold text-white mb-4">
+
+                        3. User Accounts
+
+                    </h2>
+
+                    <p class="leading-8 text-gray-400">
+
+                        Some features of Nexora may require an account.
+                        Users are responsible for providing accurate
+                        information and keeping their login credentials
+                        secure. Users should notify Nexora if they believe
+                        their account has been accessed without
+                        authorization.
+
+                    </p>
+
+                </section>
+
+
+
+                <!-- 4 -->
+
+                <section class="mb-10">
+
+                    <h2
+                        class="text-2xl font-bold text-white mb-4">
+
+                        4. Products & Product Information
+
+                    </h2>
+
+                    <p class="leading-8 text-gray-400">
+
+                        Nexora aims to display product names, descriptions,
+                        images, specifications and prices as accurately as
+                        reasonably possible. Product information may be
+                        updated or changed without prior notice.
+
+                    </p>
+
+                </section>
+
+
+
+                <!-- 5 -->
+
+                <section class="mb-10">
+
+                    <h2
+                        class="text-2xl font-bold text-white mb-4">
+
+                        5. Pricing & Availability
+
+                    </h2>
+
+                    <p class="leading-8 text-gray-400">
+
+                        Product prices and availability may change from
+                        time to time. Nexora reserves the right to correct
+                        pricing or availability information when an error
+                        is identified.
+
+                    </p>
+
+                </section>
+
+
+
+                <!-- 6 -->
+
+                <section class="mb-10">
+
+                    <h2
+                        class="text-2xl font-bold text-white mb-4">
+
+                        6. Orders & Purchases
+
+                    </h2>
+
+                    <p class="leading-8 text-gray-400">
+
+                        Adding a product to a shopping cart does not
+                        necessarily guarantee its availability or reserve
+                        the product. Orders may be subject to confirmation
+                        and availability.
+
+                    </p>
+
+                </section>
+
+
+
+                <!-- 7 -->
+
+                <section class="mb-10">
+
+                    <h2
+                        class="text-2xl font-bold text-white mb-4">
+
+                        7. Payments
+
+                    </h2>
+
+                    <p class="leading-8 text-gray-400">
+
+                        Where payment functionality is provided, users are
+                        responsible for providing accurate payment and
+                        billing information. Payment processing may be
+                        handled through third-party payment providers.
+
+                    </p>
+
+                </section>
+
+
+
+                <!-- 8 -->
+
+                <section class="mb-10">
+
+                    <h2
+                        class="text-2xl font-bold text-white mb-4">
+
+                        8. Returns & Refunds
+
+                    </h2>
+
+                    <p class="leading-8 text-gray-400">
+
+                        Returns, exchanges and refunds may be subject to
+                        applicable store policies and conditions. Users
+                        should review the relevant return or refund
+                        information before completing a purchase.
+
+                    </p>
+
+                </section>
+
+
+
+                <!-- 9 -->
+
+                <section class="mb-10">
+
+                    <h2
+                        class="text-2xl font-bold text-white mb-4">
+
+                        9. Intellectual Property
+
+                    </h2>
+
+                    <p class="leading-8 text-gray-400">
+
+                        The Nexora website design, branding, text, graphics
+                        and other original content may be protected by
+                        applicable intellectual property laws. Content
+                        should not be copied, reproduced or redistributed
+                        without appropriate permission.
+
+                    </p>
+
+                </section>
+
+
+
+                <!-- 10 -->
+
+                <section class="mb-10">
+
+                    <h2
+                        class="text-2xl font-bold text-white mb-4">
+
+                        10. Prohibited Activities
+
+                    </h2>
+
+                    <p
+                        class="leading-8 text-gray-400 mb-4">
+
+                        Users should not use the website to:
+
+                    </p>
+
+                    <ul
+                        class="list-disc list-inside space-y-3 text-gray-400">
+
+                        <li>
+                            Violate applicable laws or regulations.
+                        </li>
+
+                        <li>
+                            Attempt to gain unauthorized access to the
+                            website or its systems.
+                        </li>
+
+                        <li>
+                            Distribute malicious software or harmful code.
+                        </li>
+
+                        <li>
+                            Interfere with the normal operation of the
+                            website.
+                        </li>
+
+                        <li>
+                            Submit false, fraudulent or misleading
+                            information.
+                        </li>
+
+                    </ul>
+
+                </section>
+
+
+
+                <!-- 11 -->
+
+                <section class="mb-10">
+
+                    <h2
+                        class="text-2xl font-bold text-white mb-4">
+
+                        11. Website Availability
+
+                    </h2>
+
+                    <p class="leading-8 text-gray-400">
+
+                        Nexora aims to keep the website available and
+                        functional, but uninterrupted access cannot be
+                        guaranteed. Maintenance, technical problems or
+                        circumstances outside our control may temporarily
+                        affect availability.
+
+                    </p>
+
+                </section>
+
+
+
+                <!-- 12 -->
+
+                <section class="mb-10">
+
+                    <h2
+                        class="text-2xl font-bold text-white mb-4">
+
+                        12. Limitation of Liability
+
+                    </h2>
+
+                    <p class="leading-8 text-gray-400">
+
+                        To the extent permitted by applicable law, Nexora
+                        is not responsible for losses resulting from
+                        circumstances beyond its reasonable control,
+                        website interruptions or reliance on inaccurate
+                        information provided by users or third parties.
+
+                    </p>
+
+                </section>
+
+
+
+                <!-- 13 -->
+
+                <section class="mb-10">
+
+                    <h2
+                        class="text-2xl font-bold text-white mb-4">
+
+                        13. Changes to These Terms
+
+                    </h2>
+
+                    <p class="leading-8 text-gray-400">
+
+                        Nexora may update these Terms & Conditions from
+                        time to time. Updated terms will be published on
+                        this page along with a revised update date.
+
+                    </p>
+
+                </section>
+
+
+
+                <!-- 14 -->
+
+                <section>
+
+                    <h2
+                        class="text-2xl font-bold text-white mb-4">
+
+                        14. Contact Us
+
+                    </h2>
+
+                    <p class="leading-8 text-gray-400">
+
+                        If you have questions about these Terms &
+                        Conditions, please contact the Nexora support team
+                        through our Contact page.
+
+                    </p>
+
+                    <a
+                        href="contact.html"
+                        class="inline-flex items-center mt-6 px-6 py-3 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-black font-bold transition">
+
+                        <i class="fa-regular fa-envelope mr-2"></i>
+
+                        Contact Nexora
+
+                    </a>
+
+                </section>
+
+
+            </div>
+
+        </div>
+
+    </main>
+
+                            <!-- ================= FOOTER START ================= -->
+
+<footer class="bg-[#070D18] border-t border-cyan-500/20 text-gray-300">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 py-16">
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+            <!-- Brand -->
+            <div>
+
+                <a href="index.html" class="flex items-center gap-3 mb-5">
+
+                    <div
+                        class="w-12 h-12 rounded-full bg-cyan-500 flex items-center justify-center text-black font-bold text-xl shadow-lg shadow-cyan-500/30">
+                        N
+                    </div>
+
+                    <div>
+                        <h2 class="text-xl font-bold text-cyan-400">
+                             NEXORA
+                        </h2>
+
+                        <p class="text-xs text-gray-500">
+                            Premium Gaming & Creator Gear
+                        </p>
+                    </div>
+
+                </a>
+
+                <p class="text-sm leading-7 text-gray-400 max-w-sm">
+                    Power up your gaming and creator setup with premium gear
+                    built for performance, comfort and style.
+                </p>
+
+                <!-- Social Icons -->
+                <div class="flex gap-3 mt-6">
+
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-[#121826] border border-gray-700 flex items-center justify-center hover:bg-cyan-500 hover:text-black hover:border-cyan-500 transition">
+
+                        <i class="fa-brands fa-facebook-f"></i>
+
+                    </a>
+
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-[#121826] border border-gray-700 flex items-center justify-center hover:bg-cyan-500 hover:text-black hover:border-cyan-500 transition">
+
+                        <i class="fa-brands fa-instagram"></i>
+
+                    </a>
+
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-[#121826] border border-gray-700 flex items-center justify-center hover:bg-cyan-500 hover:text-black hover:border-cyan-500 transition">
+
+                        <i class="fa-brands fa-x-twitter"></i>
+
+                    </a>
+
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-[#121826] border border-gray-700 flex items-center justify-center hover:bg-cyan-500 hover:text-black hover:border-cyan-500 transition">
+
+                        <i class="fa-brands fa-youtube"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Quick Links -->
+            <div>
+
+                <h3 class="text-lg font-bold text-white mb-5">
+                    Quick Links
+                </h3>
+
+                <ul class="space-y-3 text-sm">
+
+                    <li>
+                        <a href="index.html"
+                            class="hover:text-cyan-400 transition">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="index.html#categories"
+                            class="hover:text-cyan-400 transition">
+                            Categories
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="products.html"
+                            class="hover:text-cyan-400 transition">
+                            Products
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="index.html#deals"
+                            class="hover:text-cyan-400 transition">
+                            Deals
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html"
+                            class="hover:text-cyan-400 transition">
+                            About Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html"
+                            class="hover:text-cyan-400 transition">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- Customer Support -->
+            <div>
+
+                <h3 class="text-lg font-bold text-white mb-5">
+                    Customer Support
+                </h3>
+
+                <ul class="space-y-4 text-sm">
+
+                    <li class="flex items-start gap-3">
+
+                        <i class="fa-solid fa-headset text-cyan-400 mt-1"></i>
+
+                        <span>
+                            24/7 Customer Support
+                        </span>
+
+                    </li>
+
+                    <li class="flex items-start gap-3">
+
+                        <i class="fa-solid fa-truck text-cyan-400 mt-1"></i>
+
+                        <span>
+                            Fast & Secure Delivery
+                        </span>
+
+                    </li>
+
+                    <li class="flex items-start gap-3">
+
+                        <i class="fa-solid fa-rotate-left text-cyan-400 mt-1"></i>
+
+                        <span>
+                            Easy Returns
+                        </span>
+
+                    </li>
+
+                    <li class="flex items-start gap-3">
+
+                        <i class="fa-solid fa-shield-halved text-cyan-400 mt-1"></i>
+
+                        <span>
+                            Secure Payments
+                        </span>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- Newsletter -->
+            <div>
+
+                <h3 class="text-lg font-bold text-white mb-5">
+                    Stay Updated
+                </h3>
+
+                <p class="text-sm text-gray-400 leading-6 mb-5">
+                    Subscribe to receive new product launches,
+                    exclusive deals and gaming gear updates.
+                </p>
+
+                <form id="newsletterForm" class="flex flex-col gap-3">
+
+                    <input
+                        id="newsletterEmail"
+                        type="email"
+                        placeholder="Enter your email"
+                        required
+                        class="w-full bg-[#121826] border border-gray-700 rounded-xl px-4 py-3 text-sm text-white placeholder-gray-500 outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/20 transition">
+
+                    <button
+                        type="submit"
+                        class="w-full py-3 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-black font-bold transition">
+
+                        <i class="fa-solid fa-paper-plane mr-2"></i>
+                        Subscribe
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+
+        <!-- Bottom Border -->
+        <div class="border-t border-gray-800 mt-12 pt-7">
+
+            <div
+                class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+
+                <p>
+                    © 2026 Nexora. All rights reserved.
+                </p>
+
+                <div class="flex gap-6">
+
+                    <a href="privacy.html"
+                        class="hover:text-cyan-400 transition">
+                        Privacy Policy
+                    </a>
+
+                    <a href="terms.html"
+                        class="hover:text-cyan-400 transition">
+                        Terms & Conditions
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+                               <!-- ================= FOOTER END ============================== -->
+
+                           <!-- ================= TOAST CONTAINER START ================= -->
+
+            <div
+                id="toastContainer"
+                class="fixed top-24 left-1/2 -translate-x-1/2 z-[9999] flex flex-col gap-3 pointer-events-none">
+            </div>
+
+                  <!-- ================= TOAST CONTAINER  END ================= -->
+
+                     
+ <script src="js/script.js"></script>
+
+</body>
+
+</html>
