@@ -9,8 +9,7 @@ Nexora delivers a complete front-end shopping experience where users can browse 
 👉 "View Live Demo" (https://uh-digital.github.io/nexora-online-store/)
 
 📸 Preview
-
-"Nexora Preview"(/assets/screenshot.png)
+![Nexora Preview](/assets/screenshot.png)
 
 ✨ Features
 
