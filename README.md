@@ -11,7 +11,6 @@ Nexora delivers a complete front-end shopping experience where users can browse 
 📸 Preview
 
 "Nexora Preview" (assets/screenshot.png)
-
 ✨ Features
 
 * 🛍️ Product Browsing
