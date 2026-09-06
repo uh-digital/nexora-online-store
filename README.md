@@ -6,7 +6,7 @@ Nexora provides a complete e-commerce experience where users can browse products
 
 ## 🌐 Live Demo
 
-👉 **[View Live Demo](https://YOUR-USERNAME.github.io/nexora/)**
+👉 **[View Live Demo](https://uh-digital.github.io/nexora-online-store/)**
 
 ## 📸 Preview
 
