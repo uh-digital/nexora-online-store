@@ -163,41 +163,6 @@ nexora/
 └── README.md
 ```
 
-## 🚀 Getting Started
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/YOUR-USERNAME/nexora.git
-```
-
-### 2. Open the Project
-
-Navigate to the project folder:
-
-```bash
-cd nexora
-```
-
-### 3. Run the Website
-
-Open `index.html` in your browser or use a local development server such as **VS Code Live Server**.
-
-## 📌 Future Improvements
-
-* Backend integration
-* Real user authentication
-* Product database
-* Real payment gateway integration
-* Order history
-* User profile management
-* Product detail pages
-* Product reviews
-* Advanced filtering and sorting
-* Admin dashboard
-* Real-time inventory management
-* Mobile-first optimization
-
 ## 👨‍💻 Author
 
 Developed as a modern front-end e-commerce project using **HTML5, Tailwind CSS, and Vanilla JavaScript**.
