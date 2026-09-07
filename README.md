@@ -4,9 +4,8 @@ A modern and interactive browser-based e-commerce website built with HTML5, Tail
 
 Nexora delivers a complete front-end shopping experience where users can browse products, search and filter items, manage their wishlist and shopping cart, authenticate through login and registration interfaces, and proceed through a login-protected checkout flow — all within a clean, responsive, and user-friendly interface.
 
-🌐 Live Demo
-
-👉 "View Live Demo" (https://uh-digital.github.io/nexora-online-store/)
+## 🌐 Live Demo 
+👉 **[View Live Demo](https://uh-digital.github.io/nexora-online-store/)**
 
 📸 Preview
 ![Nexora Preview](/assets/screenshot.png)
@@ -96,11 +95,7 @@ Nexora delivers a complete front-end shopping experience where users can browse 
   * Keeps relevant shopping data available across page refreshes.
 
 🛠️ Tech Stack
-
-Technology| Purpose
-HTML5| Page structure, product layouts, navigation, forms, cart, wishlist, authentication, and checkout interfaces
-Tailwind CSS| Responsive layouts, typography, styling, spacing, colors, and animations
-Vanilla JavaScript| Product interactions, search, cart management, wishlist management, authentication, checkout logic, notifications, form validation, and DOM updates
+## 🛠️ Tech Stack | Technology | Purpose | | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------- | | HTML5 | Page structure, product layouts, navigation, forms, cart, wishlist, authentication, and checkout interfaces | | Tailwind CSS | Responsive layouts, typography, styling, spacing, colors, and animations | | Vanilla JavaScript | Product interactions, search, cart management, wishlist management, authentication, checkout logic, notifications, form validation, and DOM updates |
 
 ⚙️ How It Works
 
@@ -147,11 +142,11 @@ This project focuses on building a modern browser-based e-commerce experience wh
 * Responsive Tailwind CSS design
 
 📂 Project Structure
-
 nexora/
 │
 ├── index.html
 ├── products.html
+├── deals.html
 ├── about.html
 ├── contact.html
 ├── privacy.html
