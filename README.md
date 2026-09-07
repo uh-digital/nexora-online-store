@@ -148,21 +148,7 @@ This project focuses on building a modern browser-based e-commerce experience wh
 ## 📂 Project Structure
 
 nexora/
-│
-├── index.html
-├── products.html
-├── about.html
-├── conatct.html
-├── privacy.html
-├── terms.html
-|
-├── js/
-│└── script.js
-|
-├── assets/
-│   └── screenshot.png
-│
-└── README.md
+│├── index.html├── products.html├── about.html├── conatct.html├── privacy.html├── terms.html|├── js/│└── script.js|├── assets/│   └── screenshot.png│└── README.md
 
 👨‍💻 Author
 
