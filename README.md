@@ -150,21 +150,15 @@ This project focuses on building a modern browser-based e-commerce experience wh
 nexora/
 │
 ├── index.html
-|
 ├── products.html
-|
 ├── about.html
-|
-├── contact.html
-|
+├── conatct.html
 ├── privacy.html
-|
 ├── terms.html
-│
 |
 ├── js/
-│   └── script.js
-│
+│└── script.js
+|
 ├── assets/
 │   └── screenshot.png
 │
