@@ -145,7 +145,9 @@ This project focuses on building a modern browser-based e-commerce experience wh
 * Form validation
 * Responsive Tailwind CSS design
 
-📂 Project Structure
+## 📂 Project Structure
+
+```
 nexora/
 │
 ├── index.html
@@ -162,6 +164,7 @@ nexora/
 │   └── screenshot.png
 │
 └── README.md
+```
 
 👨‍💻 Author
 
