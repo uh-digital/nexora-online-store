@@ -146,9 +146,24 @@ This project focuses on building a modern browser-based e-commerce experience wh
 * Responsive Tailwind CSS design
 
 ## 📂 Project Structure
-
+text
 nexora/
-│├── index.html├── products.html├── about.html├── conatct.html├── privacy.html├── terms.html|├── js/│└── script.js|├── assets/│   └── screenshot.png│└── README.md
+│
+├── index.html
+├── products.html
+├── deals.html
+├── about.html
+├── contact.html
+├── privacy.html
+├── terms.html
+│
+├── js/
+│   └── script.js
+│
+├── assets/
+│   └── screenshot.png
+│
+└── README.md
 
 👨‍💻 Author
 
